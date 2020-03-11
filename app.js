@@ -38,7 +38,7 @@ app.post('/write', (req, res) => {
 	};
 
 	const data = JSON.stringify(users);
-	fs.writeFile(`text${Date.now()}.json`, data, (err) => {
+	fs.writeFile(`./write-file/text${Date.now()}.json`, data, (err) => {
 		if (err) {
 			res.json(err);
 		} else {
