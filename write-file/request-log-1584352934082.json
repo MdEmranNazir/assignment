@@ -1,0 +1,1 @@
+{"method":"POST","protocol":"http","host":"localhost:5000","body":{"name":"Nazir ","address":"Jhenaidah","country":"BD"},"requestTime":"2020-03-16T10:02:14.082Z","url":"/post?locaction=bd&name=emran:bvbv","params":"No params found","query":{"locaction":"bd","name":"emran:bvbv"}}

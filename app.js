@@ -1,19 +1,19 @@
 
 const express = require('express');
+const customMiddleware = require('./middleware/middelware');
 // Port
 const PORT = process.env.PORT || 5000;
 
-const customMiddleware = require('./middleware/middelware');
+// Route files;
+const indexRoute = require('./routers/index');
 
 const app = express();
 app.use(express.json());
 // customMiddleware
 app.use(customMiddleware);
-// post router
-app.post('/post', (req, res) => {
-	res.status(200).json({ message: 'Post Successfully', post: req.body });
-	console.log(req.body);
-});
+
+// Routes
+app.use('/', indexRoute);
 
 
 app.listen(PORT, () => { console.log(`server running on port ${PORT}`); });
